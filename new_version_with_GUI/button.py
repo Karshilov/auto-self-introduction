@@ -12,7 +12,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        MainWindow.setObjectName("傻瓜式自我介绍生成器")
+        MainWindow.setObjectName("MainWindow")
         MainWindow.resize(895, 600)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -62,7 +62,7 @@ class Ui_MainWindow(object):
         self.label.setObjectName("label")
         self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
         self.toStart = QtWidgets.QPushButton(self.centralwidget)
-        self.toStart.setGeometry(QtCore.QRect(380, 290, 93, 28))
+        self.toStart.setGeometry(QtCore.QRect(290, 291, 93, 28))
         self.toStart.setObjectName("toStart")
         self.textBrowser = QtWidgets.QTextBrowser(self.centralwidget)
         self.textBrowser.setGeometry(QtCore.QRect(60, 331, 771, 201))
@@ -109,6 +109,9 @@ class Ui_MainWindow(object):
         self.label_12 = QtWidgets.QLabel(self.layoutWidget_2)
         self.label_12.setObjectName("label_12")
         self.gridLayout_2.addWidget(self.label_12, 0, 0, 1, 1)
+        self.ClearAll = QtWidgets.QPushButton(self.centralwidget)
+        self.ClearAll.setGeometry(QtCore.QRect(480, 291, 93, 28))
+        self.ClearAll.setObjectName("ClearAll")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -117,10 +120,24 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         self.pushButton.clicked.connect(MainWindow.close)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        MainWindow.setTabOrder(self.prize_number, self.prize_number_2)
+        MainWindow.setTabOrder(self.prize_number_2, self.prize_number_3)
+        MainWindow.setTabOrder(self.prize_number_3, self.prize_number_4)
+        MainWindow.setTabOrder(self.prize_number_4, self.prize_number_5)
+        MainWindow.setTabOrder(self.prize_number_5, self.prize_number_6)
+        MainWindow.setTabOrder(self.prize_number_6, self.hobby_number)
+        MainWindow.setTabOrder(self.hobby_number, self.hobby_number_1)
+        MainWindow.setTabOrder(self.hobby_number_1, self.hobby_number_2)
+        MainWindow.setTabOrder(self.hobby_number_2, self.hobby_number_3)
+        MainWindow.setTabOrder(self.hobby_number_3, self.hobby_number_4)
+        MainWindow.setTabOrder(self.hobby_number_4, self.hobby_number_5)
+        MainWindow.setTabOrder(self.hobby_number_5, self.toStart)
+        MainWindow.setTabOrder(self.toStart, self.textBrowser)
+        MainWindow.setTabOrder(self.textBrowser, self.pushButton)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "傻瓜式自我介绍生成器 by Karshilov"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "狗屁不通自我介绍生成器 by Karshilov"))
         self.pushButton.setText(_translate("MainWindow", "关闭"))
         self.label_3.setText(_translate("MainWindow", "奖项2"))
         self.label_6.setText(_translate("MainWindow", "奖项5"))
@@ -147,3 +164,4 @@ class Ui_MainWindow(object):
         self.label_11.setText(_translate("MainWindow", "爱好4"))
         self.hobby_number_3.setWhatsThis(_translate("MainWindow", "<html><head/><body><p>奖项数</p></body></html>"))
         self.label_12.setText(_translate("MainWindow", "爱好数"))
+        self.ClearAll.setText(_translate("MainWindow", "清空全部"))

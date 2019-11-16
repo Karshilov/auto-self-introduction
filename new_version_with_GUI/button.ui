@@ -126,8 +126,8 @@
    <widget class="QPushButton" name="toStart">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>290</y>
+      <x>290</x>
+      <y>291</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -242,9 +242,39 @@
      </item>
     </layout>
    </widget>
+   <widget class="QPushButton" name="ClearAll">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>291</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>清空全部</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <tabstops>
+  <tabstop>prize_number</tabstop>
+  <tabstop>prize_number_2</tabstop>
+  <tabstop>prize_number_3</tabstop>
+  <tabstop>prize_number_4</tabstop>
+  <tabstop>prize_number_5</tabstop>
+  <tabstop>prize_number_6</tabstop>
+  <tabstop>hobby_number</tabstop>
+  <tabstop>hobby_number_1</tabstop>
+  <tabstop>hobby_number_2</tabstop>
+  <tabstop>hobby_number_3</tabstop>
+  <tabstop>hobby_number_4</tabstop>
+  <tabstop>hobby_number_5</tabstop>
+  <tabstop>toStart</tabstop>
+  <tabstop>textBrowser</tabstop>
+  <tabstop>pushButton</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>

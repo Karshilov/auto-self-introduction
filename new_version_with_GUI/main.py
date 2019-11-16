@@ -57,6 +57,7 @@ class Auto_intro(QMainWindow, Ui_MainWindow) :
     
     def action(self) :
         self.toStart.clicked.connect(self.StartWriting)
+        self.ClearAll.clicked.connect(self.ClearText)
     
     def StartWriting(self) :
         self.pn = self.prize_number.text()
@@ -122,8 +123,21 @@ class Auto_intro(QMainWindow, Ui_MainWindow) :
         pos = random.randint(0, 2)
         self.sout = self.sout + p_tail[pos]
         self.textBrowser.setPlainText(self.sout);
-        
 
+    def ClearText(self) :
+        self.textBrowser.setPlainText("");
+        self.prize_number.clear()
+        self.prize_number_2.clear()
+        self.prize_number_3.clear()
+        self.prize_number_4.clear()
+        self.prize_number_5.clear()
+        self.prize_number_6.clear()
+        self.hobby_number.clear()
+        self.hobby_number_1.clear()
+        self.hobby_number_2.clear()
+        self.hobby_number_3.clear()
+        self.hobby_number_4.clear()
+        self.hobby_number_5.clear()
 
 
 if __name__ == '__main__':
