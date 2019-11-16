@@ -65,7 +65,7 @@ while i < n :
     cur = pos
     sout = sout + pz[i]
     tmp = random.randint(0, 2)
-    if p_s == False :
+    if p_s == False and i != n - 1 :
         sh = random.randint(0, 2)
         if sh == 2 :
             sh = random.randint(0, 2)
