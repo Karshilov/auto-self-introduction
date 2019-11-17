@@ -7,8 +7,7 @@
 + 个人实力有限，非常正式而重要的不建议拿这个瞎搞……一些无关紧要或者走程序的自我介绍可以用用，欢迎一起完善
 + 由于C++对于中文的支持实在是太弟弟了，我决定用py，然鹅我的py太菜了，所以更新周期会比较长……毕竟考试周快到了……
 
-![效果图]
-(https://cdn.luogu.com.cn/upload/image_hosting/qum0l4ec.png)
+![效果图](https://cdn.luogu.com.cn/upload/image_hosting/qum0l4ec.png)
 
 ### 操作说明
 + 用pyqt5做了个可视化界面
