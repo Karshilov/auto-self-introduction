@@ -60,7 +60,7 @@ class Auto_intro(QMainWindow, Ui_MainWindow) :
         self.pn = self.prize_number.text()
         pz = [""]
         hb = [""]
-        if(self.pn == "") :
+        if(self.pn == "" or self.pn == "0") :
             self.textBrowser.setPlainText("至少给我来一个奖让我发挥一下吧……");
             return 
         n = (int) (self.pn)
@@ -78,7 +78,7 @@ class Auto_intro(QMainWindow, Ui_MainWindow) :
                 pz.append(self.prize_number_6.text())
             i = i + 1
         self.hn = self.hobby_number.text()
-        if(self.hn == "") :
+        if(self.hn == "" or self.hn == "0") :
             self.textBrowser.setPlainText("编个爱好也要给我一点出场机会吧……");
             return 
         m = (int) (self.hn)
