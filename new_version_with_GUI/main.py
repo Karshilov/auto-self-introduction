@@ -1,7 +1,5 @@
 import sys
 import random
-if hasattr(sys, 'frozen'):
-    os.environ['PATH'] = sys._MEIPASS + ";" + os.environ['PATH']
 import PyQt5.sip
 from button import Ui_MainWindow
 from PyQt5 import QtWidgets
