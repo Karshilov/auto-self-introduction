@@ -1,11 +1,11 @@
 import sys
 import random
+if hasattr(sys, 'frozen'):
+    os.environ['PATH'] = sys._MEIPASS + ";" + os.environ['PATH']
 import PyQt5.sip
 from button import Ui_MainWindow
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow
-#C:\Users\DELL\AppData\Local\Programs\Python\Python37\Lib\site-packages\PyQt5\Qt\bin
-# --hidden-import=PyQt.sip
 
 p_head = ["在学习之余，我对竞赛也有所涉猎，我曾获得"
                     , "除了文化课，我还有丰富多彩的竞赛生活，比如"
@@ -48,10 +48,9 @@ class Auto_intro(QMainWindow, Ui_MainWindow) :
     pn = "prize_number"
     hn = "hobby_number"
     def __init__(self, parent = None):
-        super(Auto_intro, self).__init__()  # 因为继承关系，要对父类初始化
-        # 通过super初始化父类，__init__()函数无self，若直接QtWidgets.QDialog).__init__(self)，括号里是有self的
+        super(Auto_intro, self).__init__()
         self.setupUi(self)
-        self.action()  # 存放所有的信号槽
+        self.action()
     
     def action(self) :
         self.toStart.clicked.connect(self.StartWriting)
@@ -61,6 +60,9 @@ class Auto_intro(QMainWindow, Ui_MainWindow) :
         self.pn = self.prize_number.text()
         pz = [""]
         hb = [""]
+        if(self.pn == "") :
+            self.textBrowser.setPlainText("至少给我来一个奖让我发挥一下吧……");
+            return 
         n = (int) (self.pn)
         i = 0
         while i < n :
@@ -76,6 +78,9 @@ class Auto_intro(QMainWindow, Ui_MainWindow) :
                 pz.append(self.prize_number_6.text())
             i = i + 1
         self.hn = self.hobby_number.text()
+        if(self.hn == "") :
+            self.textBrowser.setPlainText("编个爱好也要给我一点出场机会吧……");
+            return 
         m = (int) (self.hn)
         i = 0
         while i < m :
