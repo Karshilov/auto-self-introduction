@@ -62,6 +62,21 @@ class Auto_intro(QMainWindow, Ui_MainWindow) :
     def action(self) :
         self.toStart.clicked.connect(self.StartWriting)
         self.ClearAll.clicked.connect(self.ClearText)
+
+    def addtablewidget(verticalLayoutWidget_3):
+        stepdebugtableWidget = QtWidgets.QTableWidget()
+        stepdebugtableWidget.setGridStyle(QtCore.Qt.NoPen)
+        stepdebugtableWidget.setRowCount(1)
+        stepdebugtableWidget.setColumnCount(25)
+        stepdebugtableWidget.setObjectName("stepdebugtableWidget")
+        stepdebugtableWidget.verticalHeader().setVisible(False)
+        stepdebugtableWidget.setHorizontalHeaderLabels(
+            ['ID', 'PR', 'Stepname', 'command', 'settings', 'StationExe',
+            'run', 'disable', 'show', 'delay', 'readEndflag', 'Enter', 'InterceptBegain',
+            'InterceptEnd', 'PDCA', 'Typle', 'exctime', 'soc', 'singal', 'NextStep',
+            'FailStep', 'Repetition', 'TWodir', 'Onedir'])
+        #verticalLayout_3.addWidget(stepdebugtableWidget)
+        return stepdebugtableWidget
     
     def StartWriting(self) :
         self.pn = self.prize_number.text()
