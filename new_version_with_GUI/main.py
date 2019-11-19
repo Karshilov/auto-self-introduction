@@ -68,40 +68,46 @@ class Auto_intro(QMainWindow, Ui_MainWindow) :
         pz = [""]
         hb = [""]
         if(self.pn == "" or self.pn == "0") :
-            self.textBrowser.setPlainText("至少给我来一个奖让我发挥一下吧……");
+            self.textBrowser.setPlainText("至少给我来一个奖让我发挥一下吧……")
             return 
         n = (int) (self.pn)
-        i = 0
-        while i < n :
-            if i == 0 :
-                pz.append(self.prize_number_2.text())
-            if i == 1 :
-                pz.append(self.prize_number_3.text())
-            if i == 2 :
-                pz.append(self.prize_number_4.text())
-            if i == 3 :
-                pz.append(self.prize_number_5.text())
-            if i == 4 :
-                pz.append(self.prize_number_6.text())
-            i = i + 1
+        if n < 1 or n > 5 :
+            self.textBrowser.setPlainText("奖项数超出上限或低于下限")
+            return 
+        if self.prize_number_2.text() != "" :
+            pz.append(self.prize_number_2.text())
+        if self.prize_number_3.text() != "" :
+            pz.append(self.prize_number_3.text())
+        if self.prize_number_4.text() != "" :
+            pz.append(self.prize_number_4.text())
+        if self.prize_number_5.text() != "" :
+            pz.append(self.prize_number_5.text())
+        if self.prize_number_6.text() != "" :
+            pz.append(self.prize_number_6.text())
+        if n != len(pz) - 1 :
+            self.textBrowser.setPlainText("奖项数与实际输入不符")
+            return 
         self.hn = self.hobby_number.text()
         if(self.hn == "" or self.hn == "0") :
-            self.textBrowser.setPlainText("编个爱好也要给我一点出场机会吧……");
+            self.textBrowser.setPlainText("编个爱好也要给我一点出场机会吧……")
             return 
         m = (int) (self.hn)
-        i = 0
-        while i < m :
-            if i == 0 :
-                hb.append(self.hobby_number_1.text())
-            if i == 1 :
-                hb.append(self.hobby_number_2.text())
-            if i == 2 :
-                hb.append(self.hobby_number_3.text())
-            if i == 3 :
-                hb.append(self.hobby_number_4.text())
-            if i == 4 :
-                hb.append(self.hobby_number_5.text())
-            i = i + 1
+        if m < 1 or m > 5 :
+            self.textBrowser.setPlainText("爱好数超出上限或低于下限")
+            return 
+        if self.hobby_number_1.text() != "" :
+            hb.append(self.hobby_number_1.text())
+        if self.hobby_number_2.text() != "" :
+            hb.append(self.hobby_number_2.text())
+        if self.hobby_number_3.text() != "" :
+            hb.append(self.hobby_number_3.text())
+        if self.hobby_number_4.text() != "" :
+            hb.append(self.hobby_number_4.text())
+        if self.hobby_number_5.text() != "" :
+            hb.append(self.hobby_number_5.text())
+        if m != len(hb) - 1 :
+            self.textBrowser.setPlainText("爱好数与实际输入不符")
+            return 
         pos = random.randint(0, 5)
         self.sout = self.sout + p_head[pos]
         n = len(pz)
