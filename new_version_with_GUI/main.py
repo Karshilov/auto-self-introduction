@@ -162,6 +162,7 @@ class Auto_intro(QMainWindow, Ui_MainWindow) :
         self.hobby_number_3.clear()
         self.hobby_number_4.clear()
         self.hobby_number_5.clear()
+        self.sout = "   "
 
 
 if __name__ == '__main__':
